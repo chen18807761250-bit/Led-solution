@@ -10,7 +10,7 @@
   :root{
     --ink:#0F1620; --ink2:#1B2534; --paper:#FFFFFF; --desk:#E9EBEF;
     --line:#D8DBE0; --line2:#E8EAEE; --txt:#1C2330; --txt2:#5B6472; --txt3:#8A92A0;
-    --phos:#22C55E; --phos-soft:#E6F7EC; --amber:#E8A33D; --danger:#D9534F;
+    --phos:#D93025; --phos-soft:#FDECEA; --amber:#E8A33D; --danger:#D9534F;
     --mono:'JetBrains Mono',ui-monospace,monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -27,7 +27,7 @@
   .appbar .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px}
   .appbar .logo svg{display:block}
   .badge{
-    font-size:11px;color:var(--phos);border:1px solid rgba(47,230,115,.4);
+    font-size:11px;color:var(--phos);border:1px solid rgba(217,48,37,.4);
     padding:2px 8px;border-radius:999px;font-weight:500;
   }
   .appbar .spacer{flex:1}
@@ -37,8 +37,8 @@
   }
   .btn-ghost{background:transparent;color:#C9D2DE;border-color:#33404F}
   .btn-ghost:hover{border-color:#4A5A6E;color:#fff}
-  .btn-primary{background:var(--phos);color:#06281A;font-weight:700}
-  .btn-primary:hover{background:#3BEF85}
+  .btn-primary{background:var(--phos);color:#FFFFFF;font-weight:700}
+  .btn-primary:hover{background:#C62F24}
   .btn[disabled]{opacity:.45;cursor:not-allowed}
   /* ===== 主布局 ===== */
   .layout{display:flex;min-height:calc(100vh - 56px)}
@@ -85,11 +85,11 @@
   }
   .doc p{font-size:13.5px;color:#2A3240;margin-bottom:10px;text-align:justify}
   .verdict{
-    background:var(--phos-soft);border:1px solid #BEE8CC;border-radius:10px;
+    background:var(--phos-soft);border:1px solid #F0B8B3;border-radius:10px;
     padding:14px 16px;margin:14px 0;display:flex;gap:14px;align-items:flex-start;
   }
-  .verdict .big{font-family:var(--mono);font-size:22px;font-weight:600;color:#0B7A3E;line-height:1.15}
-  .verdict .sub{font-size:12.5px;color:#236B47}
+  .verdict .big{font-family:var(--mono);font-size:22px;font-weight:600;color:#8C1D18;line-height:1.15}
+  .verdict .sub{font-size:12.5px;color:#A33A33}
   table.spec{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px;table-layout:fixed}
   table.spec th,table.spec td{border:1px solid var(--line);padding:7px 10px;text-align:left;word-break:break-all}
   table.spec th{background:#F4F6F8;font-weight:500;color:var(--txt2);width:34%}
@@ -321,7 +321,7 @@ function cabinetSVG(r){
   const cw = gw / r.cols, ch = gh / r.rows;
   let cells = '';
   for(let i=0;i<r.cols;i++) for(let j=0;j<r.rows;j++){
-    cells += `<rect x="${pad + i*cw}" y="${pad + j*ch}" width="${cw-1.5}" height="${ch-1.5}" fill="#E6F7EC" stroke="#22C55E" stroke-width="0.8"/>`;
+    cells += `<rect x="${pad + i*cw}" y="${pad + j*ch}" width="${cw-1.5}" height="${ch-1.5}" fill="#FDECEA" stroke="#D93025" stroke-width="0.8"/>`;
   }
   return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
     <rect x="${pad-6}" y="${pad-6}" width="${gw+12}" height="${gh+12}" fill="none" stroke="#0F1620" stroke-width="1.2"/>
