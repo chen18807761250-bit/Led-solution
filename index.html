@@ -349,7 +349,7 @@ function render(){
       <h1>${esc(el('fProject').value)}<br>LED 显示系统解决方案</h1>
       <div class="meta">
         <span>致：<b>${esc(el('fCustomer').value)}</b></span>
-        <span>编制：<b>${esc(el('fCompany').value)}</b></span>
+        <span>编制：<b>AET displays.Ltd</b></span>
         <span>地点：${esc(el('fLocation').value)}</span>
         <span>日期：${today}</span>
       </div>
@@ -430,7 +430,7 @@ function bindSeg(id, key){
 bindSeg('fScene','scene');
 bindSeg('fTier','tier');
 
-['fCustomer','fProject','fLocation','fCompany','fW','fH','fDist','fUsage','fNote'].forEach(id=>{
+['fCustomer','fProject','fLocation','fW','fH','fDist','fUsage','fNote'].forEach(id=>{
   $(id).addEventListener('input', render);
 });
 
